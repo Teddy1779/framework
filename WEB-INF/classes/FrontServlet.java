@@ -2,11 +2,16 @@ package etu1779.framework;
 import inc.*;
 import java.io.*;
 import java.net.http.HttpRequest;
+import java.util.HashMap;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import etu1779.framework.Mapping;
 public class FrontServlet extends HttpServlet{
+    HashMap <String,Mapping> MappingUrls;
     protected void ProcessRequest(HttpServletRequest req,HttpServletResponse res) throws ServletException,IOException{
         res.setContentType("text/html");
         Utilitaire u = new Utilitaire();
