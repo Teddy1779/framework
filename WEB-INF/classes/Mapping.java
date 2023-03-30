@@ -6,7 +6,7 @@ public class Mapping{
     }
     public Mapping(String className, String method) {
         this.className = className;
-        Method = method;
+        this.Method = method;
     }
     public String getClassName() {
         return className;
