@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import etu1779.framework.Mapping;
 public class FrontServlet extends HttpServlet{
+    HashMap <String,Mapping> MappingUrls;
     protected void ProcessRequest(HttpServletRequest req,HttpServletResponse res) throws ServletException,IOException{
         res.setContentType("text/html");
         Utilitaire u = new Utilitaire();
@@ -17,7 +19,7 @@ public class FrontServlet extends HttpServlet{
         PrintWriter out = res.getWriter();
 
         // Write the response message, in an HTML document
-        out.println("<html>");
+        out.println("<html><body>");
         out.println("<head><title>Front Servlet</title></head>");
         out.println("<body>");
         out.println("<h1>"+ u.getServletUrl(req) +"</h1>");
